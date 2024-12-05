@@ -1,0 +1,21 @@
+# Multimodal AI Resources 2024
+
+## Foundation Models & Architectures
+
+### CLIP-HABITAT 
+- **Source**: [https://github.com/openai/CLIP-HABITAT)
+- **Analysis**: Revolutionary approach combining CLIP's visual understanding with 3D environment navigation. Demonstrates exceptional zero-shot generalization to unseen environments.
+- **Impact**: First successful bridge between vision-language models and embodied AI tasks.
+
+### Kosmos-2
+- **Paper**: [arxiv.org/abs/2401.00907](https://arxiv.org/abs/2401.00907)
+- **Analysis**: Extends multimodal capabilities to include grounding and visual perception beyond basic classification. Introduces novel architecture for handling structured visual inputs.
+- **Code Example**:
+```python
+from kosmos import Kosmos2Model
+
+model = Kosmos2Model.from_pretrained('microsoft/kosmos-2')
+result = model.process_image_text(
+    image_path="scene.jpg",
+    text="Describe the spatial relationship between objects"
+)
